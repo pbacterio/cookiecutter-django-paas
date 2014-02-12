@@ -1,8 +1,7 @@
 cookiecuter-django-saas
 =======================
 
-Django project template ready to use in SAAS platforms like Herohu, OpenShift, etc...
-
+Django template ready to use in SAAS platforms like Heroku, OpenShift, etc...
 
 State
 -----
