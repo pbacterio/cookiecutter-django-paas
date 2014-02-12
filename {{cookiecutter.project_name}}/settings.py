@@ -1,11 +1,11 @@
 """
-Django settings for {{ project_name }} project.
+Django settings for {{cookiecutter.project_name}} project.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/{{ docs_version }}/topics/settings/
+https://docs.djangoproject.com/en/1.6/topics/settings/
 
 For the full list of settings and their values, see
-https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
+https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/{{ docs_version }}/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '{{ secret_key }}'
@@ -47,13 +47,13 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = '{{ project_name }}.urls'
+ROOT_URLCONF = '{{cookiecutter.project_name}}.urls'
 
-WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
+WSGI_APPLICATION = '{{cookiecutter.project_name}}.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -63,7 +63,7 @@ DATABASES = {
 }
 
 # Internationalization
-# https://docs.djangoproject.com/en/{{ docs_version }}/topics/i18n/
+# https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -77,6 +77,6 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/{{ docs_version }}/howto/static-files/
+# https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
