@@ -1,0 +1,4 @@
+Django
+gunicorn
+dj-database-url
+dj-static
