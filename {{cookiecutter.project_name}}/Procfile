@@ -1,1 +1,1 @@
-web: gunicorn {{cookiecutter.project_name}}.wsgi
+web: waitress-serve --port=$PORT {{cookiecutter.project_name}}.wsgi:application

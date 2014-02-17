@@ -1,5 +1,5 @@
 Django
-gunicorn
+waitress
 dj-database-url
 dj-static
 psycopg2
