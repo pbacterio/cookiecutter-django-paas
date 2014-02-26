@@ -58,7 +58,10 @@ WSGI_APPLICATION = '{{cookiecutter.project_name}}.wsgi.application'
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///database.db')
+    'default': dj_database_url.config(
+        env='OPENSHIFT_POSTGRESQL_DB_URL',
+        default='sqlite:///'+os.path.join(os.environ.get('OPENSHIFT_DATA_DIR', 'data'), 'database.db')
+    ),
 }
 
 # Internationalization
@@ -79,7 +82,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'staticfiles'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_ROOT = 'wsgi/static'
