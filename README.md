@@ -1,7 +1,7 @@
-cookiecuter-django-saas
+cookiecuter-django-paas
 =======================
 
-Django template ready to use in SAAS platforms like Heroku, OpenShift, etc...
+Django template ready to use in PAAS platforms like Heroku, OpenShift, etc...
 
 State
 -----
