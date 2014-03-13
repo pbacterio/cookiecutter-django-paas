@@ -1,5 +1,5 @@
 Django
 waitress
-dj-database-url
+dj-paas-env
 dj-static
 psycopg2

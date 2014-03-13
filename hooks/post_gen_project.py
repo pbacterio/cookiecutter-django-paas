@@ -13,7 +13,7 @@ def main():
             settings_path = path.join(dirpath, 'settings.py')
             break
     chars = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'
-    secret_key = ''.join((choice(chars) for _ in xrange(50)))
+    secret_key = ''.join((choice(chars) for _ in range(50)))
     with open(settings_path) as settings_file:
         tmpl = Template(settings_file.read())
     open(settings_path, 'w').write(tmpl.safe_substitute(secret_key=secret_key))

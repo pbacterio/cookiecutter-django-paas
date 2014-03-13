@@ -55,13 +55,10 @@ WSGI_APPLICATION = '{{cookiecutter.project_name}}.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
+# Parse database configuration from environment
+from dj_paas_env import database
 DATABASES = {
-    'default': dj_database_url.config(
-        env='OPENSHIFT_POSTGRESQL_DB_URL',
-        default='sqlite:///'+os.path.join(os.environ.get('OPENSHIFT_DATA_DIR', 'data'), 'database.db')
-    ),
+    'default': database.config(default=database.sqlite_dev()),
 }
 
 # Internationalization

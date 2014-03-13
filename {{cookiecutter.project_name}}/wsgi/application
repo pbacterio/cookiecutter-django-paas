@@ -1,10 +1,15 @@
 #!/usr/bin/python
 import os
+import sys
 
 virtenv = os.environ['OPENSHIFT_PYTHON_DIR'] + '/virtenv/'
 virtualenv = os.path.join(virtenv, 'bin/activate_this.py')
 try:
-    execfile(virtualenv, dict(__file__=virtualenv))
+    if sys.hexversion < 0x3000000:
+        execfile(virtualenv, dict(__file__=virtualenv))
+    else:
+        exec(compile(open(virtualenv).read(), virtualenv, 'exec'),
+             dict(__file__=virtualenv))
 except IOError:
     pass
 #
