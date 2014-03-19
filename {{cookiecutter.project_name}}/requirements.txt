@@ -1,5 +1,5 @@
 Django
 waitress
-dj-paas-env
+dj-paas-env>=0.5
 dj-static
 psycopg2
